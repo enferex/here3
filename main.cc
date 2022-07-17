@@ -116,7 +116,7 @@ int main(int argc, char **argv) {
         uint64_t low, high, section_idx;
         if (die.getLowAndHighPC(low, high, section_idx)) {
           if (auto sname = die.getShortName()) functionOffset[sname] = low;
-          if (auto lname = die.getShortName()) functionOffset[lname] = low;
+          if (auto lname = die.getLinkageName()) functionOffset[lname] = low;
         }
       }
     }
@@ -132,7 +132,7 @@ int main(int argc, char **argv) {
   for (const auto &str : FuncNames)
     if (const auto &kv = functionOffset.find(str); kv != functionOffset.end())
       offsets.emplace_back(kv->first, kv->second);
-
   insertPayload(InputFilename, offsets);
+
   return 0;
 }
