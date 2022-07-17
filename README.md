@@ -34,6 +34,10 @@ Building
 1. Create a build directory: (mkdir build)
 2. Run cmake to build this:  (cd build && cmake .. && make)
 
+References
+----------
+1. [llvm tools](https://github.com/llvm/llvm-project/tree/main/llvm/tools)
+
 Contact
 -------
 Matt Davis: https://github.com/enferex
