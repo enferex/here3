@@ -15,7 +15,8 @@ once the trap is hit, do not expect the program to operate in typical fashion.
 
 Usage
 -----
-  `here3 <input object file> [list of functions to instrument]`
+`Usage: here3 <input object file> [list of functions to instrument]`
+
 The output will be a new instrumented file with the ".here3" prefixed to the 
 original extension.
 
